@@ -1,0 +1,265 @@
+@import url('https://googleapis.com');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: rgba(15, 32, 39, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(146, 254, 157, 0.2);
+    z-index: 1000;
+}
+
+
+
+    .navbar {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 8%;
+        background: rgba(15, 32, 39, 0.9);
+        backdrop-filter: blur(10px);
+        border-bottom: 2px solid rgba(146, 254, 157, 0.1);
+        z-index: 1000;
+    }
+    
+    .nav-logo {
+        font-size: 1.8rem;
+        font-weight: 800;
+        letter-spacing: 1px;
+        color: white;
+        cursor: default;
+        user-select: none;
+    }
+    
+    .nav-logo span {
+        color: #00d2ff;
+        text-shadow: 0 0 10px rgba(146, 254, 157, 0.5);
+        transition: 0.4s;
+    }
+    
+    .nav-logo:hover span {
+        color: #1bfa53c7;
+        transition: calc(3px);
+    }
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    /* color: rgb(28, 241, 117); */
+    color: #ccc;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00d2ff;
+} 
+
+
+@media (max-width: 600px) {
+    .navbar { padding: 15px 20px; }
+    .nav-logo { font-size: 1rem; }
+    .nav-links { gap: 15px; font-size: 0.9rem; }
+}
+.hawiya {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    background: linear-gradient(to right, #00d2ff, #92fe9d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.b {
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-tshfir {
+    background: #10d392;
+    color: #0f2027;
+}
+
+.btn-tshfir:hover {
+    background: #05b9f5;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 210, 255, 0.4);
+}
+
+.btn-fkh {
+    background: transparent;
+    color: #92fe9d;
+    border: 2px solid #92fe9d;
+}
+
+.btn-fkh:hover {
+    background: #92fe9d;
+    color: #0f2027;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(146, 254, 157, 0.4);
+}
+/* هاد للصفحة انتاع التشفير وو الفك انتاعو */
+.h_form{
+    display: grid;
+    gap: 20px;
+    justify-content: center;
+}
+.inp{
+    background: transparent;
+    color: #92fe9d;
+    border: 2px solid #92fe9d;
+    /* font-weight: 1000; */
+    font-size: 20px;
+    padding: 10px;
+
+}
+
+
+.habes {
+    position: relative;
+    width: 100%;
+}
+
+.habes .inp {
+    width: 100%; 
+    padding-left: 45px; /* ترك مساحة للأيقونة */
+    min-height: 100px;
+    resize: none;
+}
+
+.copy-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 10px; /* بما أن الاتجاه RTL، سيكون في الزاوية العلوية اليسرى */
+    background: rgba(146, 254, 157, 0.1);
+    border: 1px solid rgba(146, 254, 157, 0.3);
+    color: #92fe9d;
+    padding: 5px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.copy-btn:hover {
+    background: #92fe9d;
+    color: #0f2027;
+    box-shadow: 0 0 10px rgba(146, 254, 157, 0.4);
+}
+
+
+/* _________________________________________________________ */
+@media (max-width: 600px) {
+    .hawiya {
+        padding: 1.5rem;
+        width: 90%;
+        margin: 10px;
+    }
+    h1 {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+    }
+    .buttons {
+        flex-direction: column; 
+        gap: 15px;
+        width: 100%;
+    }
+    .b {
+        width: 100%; 
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+    .inp {
+        width: 100%;
+        font-size: 16px;
+    }
+}
+
+.foter {
+    width: 100%;
+    padding: 15px 0;
+    background: rgba(10, 20, 25, 0.85);
+    backdrop-filter: blur(8px);
+    border-top: 1px solid rgba(146, 254, 157, 0.15);
+    position: fixed;
+    /* top: 200px; */
+    bottom: 0px;
+    left: 0;
+    z-index: 1000;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-content p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-content p span {
+    color: rgba(119, 247, 60, 0.7);
+    font-weight: 800;
+    text-shadow: 0 0 10px rgba(146, 254, 157, 0.2);
+}
+.footer-content p span:hover{
+    text-shadow:10px 0 15px rgb(218, 255, 118) ;
+}
+.footer-line {
+    width: 190px;
+    height: 1.6px;
+    background: linear-gradient(to right, transparent, #92fe9d, transparent);
+}
